@@ -16,7 +16,7 @@
 
 print_usage()
 {
-    printf "Usage: %s <tx1|tx2|nano> <authority_id> <gadget_snap> <kernel_snap> [key_id]\n" \
+    printf "Usage: %s <tx1|tx2|jax|nano> <authority_id> <gadget_snap> <kernel_snap> [key_id]\n" \
            "$(basename "$0")"
 }
 
@@ -26,7 +26,7 @@ if [ $# -lt 4 ] || [ $# -gt 5 ]; then
     exit 1
 fi
 board=$1
-if [ "$board" != tx1 ] && [ "$board" != tx2 ] && [ "$board" != nano ]; then
+if [ "$board" != tx1 ] && [ "$board" != tx2 ] && [ "$board" != jax ] && [ "$board" != nano ]; then
     print_usage
     exit 1
 fi
